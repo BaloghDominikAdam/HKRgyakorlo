@@ -498,14 +498,14 @@ function mutatNyeremeny() {
       mutatKerdes();
     };
 
-    // 🏆 Kiszállás gomb esemény
+
     kiszallokBtn.onclick = () => {
       overlay.style.display = "none";
       kiszallasOverlay.style.display = "flex";
       kiszallasUzenet.textContent = `Elértél a ${jagerSzamlalo}. szintre és ${jagerSzamlalo} Jäger shotot szereztél! 🍀`;
     };
 
-    // vissza a főmenübe
+
     visszaMenuBtn.onclick = () => {
       kiszallasOverlay.style.display = "none";
       jatekDiv.style.display = "none";
@@ -514,7 +514,7 @@ function mutatNyeremeny() {
       frissitJager();
     };
   } else {
-    // 🕐 egyéb szinteken 5 mp után automatikusan eltűnik
+    
     setTimeout(() => {
       overlay.style.display = "none";
       aktualisKerdes++;
@@ -533,7 +533,7 @@ function rosszValaszIdozitesLejarat() {
 
   osszesValasz.forEach((el) => (el.style.pointerEvents = "none"));
 
-  // zöld szín a helyes válaszon
+ 
   osszesValasz.forEach((el) => {
     if (el.dataset.helyes === "true") el.style.backgroundColor = "green";
     else el.style.backgroundColor = "red";
@@ -554,7 +554,7 @@ function rosszValaszIdozitesLejarat() {
 
 
 
-// játék indítása
+
 jatekGomb.addEventListener("click", (e) => {
     e.preventDefault();
     udvozloCont.style.display = "none";
@@ -579,7 +579,7 @@ function mutatKerdes() {
     const kerdes = kerdesek[aktualisKerdes];
     kerdesElem.textContent = kerdes.kerdes;
 
-    // válaszok megkeverve
+    
     valaszokDiv.innerHTML = "";
     kever(kerdes.valaszok).forEach(v => {
 
@@ -596,18 +596,18 @@ function mutatKerdes() {
 
         div.addEventListener("click", () => {
 
-          clearInterval(idozitoInterval); // időzítő leáll
+          clearInterval(idozitoInterval); 
 
 
       const osszesValasz = valaszokDiv.querySelectorAll(".valaszElso");
-      osszesValasz.forEach((val) => (val.style.pointerEvents = "none")); // lezárás kattintás után
+      osszesValasz.forEach((val) => (val.style.pointerEvents = "none")); 
 
       if (v.helyes) {
   div.style.backgroundColor = "green";
   jagerSzamlalo++;
   frissitJager();
 
-  // 💰 Megjelenítjük az overlay nyereménylétrát
+  
   setTimeout(() => {
     mutatNyeremeny();
   }, 400);
@@ -615,7 +615,7 @@ function mutatKerdes() {
      else {
         div.style.backgroundColor = "red";
 
-        // helyes válasz megmutatása zölddel
+       
         const helyesValasz = Array.from(osszesValasz).find((valElem, index) =>
           kerdes.valaszok.some(
             (valObj) =>
@@ -640,12 +640,12 @@ function mutatKerdes() {
     });
 }
 
-// frissíti a „Jäger shot” kijelzést
+
 function frissitJager() {
     osszegDiv.textContent = `${jagerSzamlalo} Jäger shot`;
 }
 
-// vissza gomb
+
 ujraGomb.addEventListener("click", () => {
     location.reload();
 });
