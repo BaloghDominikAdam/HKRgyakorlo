@@ -36,6 +36,8 @@ body{
     border: 3px solid black;
     padding: 80px;
     border-radius: 40px;
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.37);
+        vertical-align: middle;
 }
 
 .udvozloSzoveg{
@@ -53,6 +55,7 @@ body{
     justify-content: center;
     align-items: center;
 
+
 }
 
 .jatekGomb{
@@ -64,6 +67,7 @@ body{
     cursor: pointer;
     border: none;
     transition: border-radius 0.15s;
+    
 }
 
 .jatekGomb:hover{
@@ -185,4 +189,128 @@ body{
   text-align: center;
   margin: 0;
 
+}
+
+
+/* Overlay háttér */
+.overlayNyeremeny {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none; /* alapból rejtve */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Belső tábla */
+.tabla {
+  background-color: rgb(8, 16, 54);
+  color: white;
+  border: 3px solid gold;
+  border-radius: 15px;
+  padding: 30px 50px;
+  text-align: center;
+  box-shadow: 0 0 20px gold;
+}
+
+.tablaCim {
+  color: gold;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.nyeremenyLista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.nyeremenyLista li {
+  font-size: 24px;
+  padding: 5px 15px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.nyeremenyLista li.active {
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+}
+
+
+.kiszallasGombok {
+  display: none; /* alapból rejtve */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.kiszallasGombok button {
+  font-size: 22px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.2s;
+}
+
+.kiszallasGombok button:hover {
+  background-color: #0056b3;
+}
+
+#kiszallokBtn {
+  background-color: #d9534f;
+}
+
+#kiszallokBtn:hover {
+  background-color: #b52b27;
+}
+
+/* Második overlay (kiszállás) */
+.overlayKiszallas {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Szöveg és gombok a kiszállás képernyőn */
+.overlayKiszallas .tabla {
+  background-color: rgb(8, 16, 54);
+  color: white;
+  border: 3px solid gold;
+  border-radius: 20px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 0 25px gold;
+  max-width: 500px;
+}
+
+#kiszallasUzenet {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: gold;
+}
+
+#visszaMenuBtn {
+  font-size: 22px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#visszaMenuBtn:hover {
+  background-color: #0056b3;
 }
