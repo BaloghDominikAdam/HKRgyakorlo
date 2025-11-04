@@ -315,9 +315,16 @@ function mutatKerdes() {
     // válaszok megkeverve
     valaszokDiv.innerHTML = "";
     kever(kerdes.valaszok).forEach(v => {
+
+
         const div = document.createElement("div");
         div.classList.add("valaszElso");
-        div.textContent = v.szoveg;
+
+        const pszoveg = document.createElement("p")
+        pszoveg.textContent = v.szoveg;
+
+
+        
 
         div.addEventListener("click", () => {
       const osszesValasz = valaszokDiv.querySelectorAll(".valaszElso");
@@ -354,7 +361,7 @@ function mutatKerdes() {
       }
     });
     
-
+        div.appendChild(pszoveg);
         valaszokDiv.appendChild(div);
     });
 }

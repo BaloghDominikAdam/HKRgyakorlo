@@ -130,6 +130,8 @@ body{
     font-size: 42px;
     margin: 5px;
     cursor: pointer;
+   overflow-wrap: break-word;
+        
 }
 
 .valaszElso:hover, .valaszMasodik:hover, .valaszHarmadik:hover, .valaszNegyedik:hover, .ujraGomb:hover{
@@ -161,8 +163,26 @@ body{
     grid-template-columns: repeat(2, minmax(45%, 45%));
     grid-template-rows: repeat(2, minmax(100px, 100px));
     justify-content: center;
+    overflow: hidden;
+
 }
 
-.valaszokDiv p {
-    font-size: 5.9vw;
+.valaszElso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+
+.valaszElso p{
+  font-size: clamp(0.8vw, 1.8vw, 1.8vw); /* automatikus méretigazítás */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center;
+  margin: 0;
+
 }
