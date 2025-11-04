@@ -182,7 +182,7 @@ body{
 
 
 .valaszElso p{
-  font-size: clamp(0.8vw, 1.8vw, 1.8vw); /* automatikus méretigazítás */
+  font-size: clamp(0.8vw, 1.8vw, 1.8vw); 
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -192,18 +192,18 @@ body{
 }
 
 
-/* Overlay háttér */
+
 .overlayNyeremeny {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none; /* alapból rejtve */
+  display: none; 
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
 
-/* Belső tábla */
+
 .tabla {
   background-color: rgb(8, 16, 54);
   color: white;
@@ -241,7 +241,7 @@ body{
 
 
 .kiszallasGombok {
-  display: none; /* alapból rejtve */
+  display: none; 
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -271,7 +271,7 @@ body{
   background-color: #b52b27;
 }
 
-/* Második overlay (kiszállás) */
+
 .overlayKiszallas {
   position: fixed;
   inset: 0;
@@ -282,7 +282,7 @@ body{
   z-index: 10000;
 }
 
-/* Szöveg és gombok a kiszállás képernyőn */
+
 .overlayKiszallas .tabla {
   background-color: rgb(8, 16, 54);
   color: white;
