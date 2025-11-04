@@ -145,12 +145,16 @@ body{
 
 .osszegDiv{
     width: 17%;
-    font-size: 45px;
+
     text-align: center;
     margin-left: auto;
     padding: 2px;
     margin-bottom: 5px;
     max-height: 70px;
+}
+
+.osszegDiv p {
+        font-size: 2vw;
 }
 .kerdesDiv{
     width: 95%;
@@ -350,7 +354,7 @@ body{
     font-size: 26px;
   }
 
-  .osszegDiv {
+  .osszegDiv{
     width: 30%;
     font-size: 30px;
   }
@@ -405,10 +409,10 @@ body{
 
   .osszegDiv {
     width: 60%;
-    font-size: 26px;
+
   }
 
-  .ujraGomb {
+  .ujraGomb p{
     font-size: 24px;
     width: 140px;
     height: 45px;
