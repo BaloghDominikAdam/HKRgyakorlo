@@ -22,30 +22,30 @@ let idozitoInterval;
 
 const kerdesek = [
   {
-    kerdes: "Mennyi a minimális tanulmányi átlag a tanulmányi ösztöndíjhoz?",
+    kerdes: "Mennyi idő áll rendelkezésre, az oklevél megszerzésére ?",
     valaszok: [
-      { szoveg: "4,4", helyes: true },
-      { szoveg: "3,0", helyes: false },
-      { szoveg: "4,0", helyes: false },
-      { szoveg: "5,0", helyes: false }
+      { szoveg: "a képzési idő másfélszeresén belül", helyes: true },
+      { szoveg: "a képzési idő kétszeresén belül", helyes: false },
+      { szoveg: "az adott szak meghirdetett félévei alatt", helyes: false },
+      { szoveg: "az adott szak meghirdetett félévei plusz 3 hónap alatt", helyes: false }
     ]
   },
   {
-    kerdes: "Ki kezdeményezheti a fegyelmi eljárást a BGE-n?",
+    kerdes: "Mit rövidít a 'TB' ?",
     valaszok: [
-      { szoveg: "Bármely egyetemi polgár", helyes: true },
-      { szoveg: "Csak a rektor", helyes: false },
-      { szoveg: "Csak a DJB elnök", helyes: false },
-      { szoveg: "Csak a dékán", helyes: false }
+      { szoveg: "Tanulmányi Bizottság", helyes: true },
+      { szoveg: "Tanulási Bíztatás", helyes: false },
+      { szoveg: "Tantermi Biztonság", helyes: false },
+      { szoveg: "Tudományos Bizottság", helyes: false }
     ]
   },
   {
-    kerdes: "Hány kreditet kell teljesíteni a tanulmányi ösztöndíjhoz?",
+    kerdes: "Mi a feladata a Tanulmányi Bizottságnak?",
     valaszok: [
-      { szoveg: "Legalább 27 kredit", helyes: true },
-      { szoveg: "Legalább 20 kredit", helyes: false },
-      { szoveg: "Legalább 30 kredit", helyes: false },
-      { szoveg: "Legalább 24 kredit", helyes: false }
+      { szoveg: "Kérvények bírálása", helyes: true },
+      { szoveg: "Tantermi beosztás megírása", helyes: false },
+      { szoveg: "Tantárgyfelvételi lehetőségek biztosítása", helyes: false },
+      { szoveg: "Ösztöndíjakra való jogosultság bírálás", helyes: false }
     ]
   },
   {
@@ -67,12 +67,12 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Milyen esetben szűnik meg a hallgatói jogviszony?",
+    kerdes: "Mit rövidít a 'FEB' ?",
     valaszok: [
-      { szoveg: "Ha a hallgató elvégzi a képzést", helyes: true },
-      { szoveg: "Ha a hallgató szabadságra megy", helyes: false },
-      { szoveg: "Ha szünetelteti a félévet", helyes: false },
-      { szoveg: "Ha átiratkozik másik szakra", helyes: false }
+      { szoveg: "Fegyelmi Bizottság", helyes: true },
+      { szoveg: "Felelős Edukációs Bizottság", helyes: false },
+      { szoveg: "Felelős Bizottság", helyes: false },
+      { szoveg: "Független Elnöki Bizottság ", helyes: false }
     ]
   },
   {
@@ -96,7 +96,7 @@ const kerdesek = [
   {
     kerdes: "Mi a passzív félév?",
     valaszok: [
-      { szoveg: "A hallgató ideiglenes szüneteltetése", helyes: true },
+      { szoveg: "A hallgatói jogviszony ideiglenes szüneteltetése", helyes: true },
       { szoveg: "A hallgató kizárása", helyes: false },
       { szoveg: "A vizsgák megismétlése", helyes: false },
       { szoveg: "A tanulmányok lezárása", helyes: false }
@@ -112,12 +112,12 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Ki dönt a kollégiumi felvételről?",
+    kerdes: "Mit rövidít az 'OB'?",
     valaszok: [
-      { szoveg: "Kollégiumi Felvételi Bizottság (KFB)", helyes: true },
-      { szoveg: "HTJB", helyes: false },
-      { szoveg: "Rektorhelyettes", helyes: false },
-      { szoveg: "HÖK", helyes: false }
+      { szoveg: "Oktatási Bizottság", helyes: true },
+      { szoveg: "Országos Bizottság", helyes: false },
+      { szoveg: "Operatív Bizottság", helyes: false },
+      { szoveg: "Oktatási Bírálóbizottság", helyes: false }
     ]
   },
   {
@@ -130,12 +130,12 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hány napon belül lehet fellebbezni egy határozat ellen?",
+    kerdes: "Egy hallgató kérelmére hány nap a elbírálási idő?",
     valaszok: [
-      { szoveg: "15 munkanapon belül", helyes: true },
-      { szoveg: "30 napon belül", helyes: false },
-      { szoveg: "8 napon belül", helyes: false },
-      { szoveg: "5 munkanapon belül", helyes: false }
+      { szoveg: "15 nap + 30 nap hosszabbítással", helyes: true },
+      { szoveg: "10 nap", helyes: false },
+      { szoveg: "20 nap", helyes: false },
+      { szoveg: "14 nap", helyes: false }
     ]
   },
   {
@@ -148,21 +148,21 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mi történik, ha a hallgató nem fizeti be az önköltséget?",
+    kerdes: "Mely tagokból áll össze, az OB",
     valaszok: [
-      { szoveg: "Megszűnik a hallgatói jogviszonya", helyes: true },
-      { szoveg: "Csak figyelmeztetést kap", helyes: false },
-      { szoveg: "Elhalasztják a fizetést", helyes: false },
-      { szoveg: "Mentesül a díj alól", helyes: false }
+      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: true },
+      { szoveg: "EHÖK elnök +   kari elnökök", helyes: false },
+      { szoveg: "Elnök, DJB elnökök", helyes: false },
+      { szoveg: "A bizottság elnöke az általános rektorhelyettes, a bizottság alelnöke az EHÖK delegáltja", helyes: false }
     ]
   },
   {
-    kerdes: "Milyen dokumentum szabályozza a vizsgák rendjét?",
+    kerdes: "Mely tagokból áll össze a Szenátus?",
     valaszok: [
-      { szoveg: "Tanulmányi és Vizsgaszabályzat (TVSZ)", helyes: true },
-      { szoveg: "HKR melléklet", helyes: false },
-      { szoveg: "Kari határozat", helyes: false },
-      { szoveg: "Fegyelmi szabályzat", helyes: false }
+      { szoveg: "EHÖK elnök + kari elnökök", helyes: true },
+      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false },
+      { szoveg: "Elnök, DJB elnökök", helyes: false },
+      { szoveg: "A bizottság elnöke az általános rektorhelyettes, a bizottság alelnöke az EHÖK delegáltja", helyes: false }
     ]
   },
   {
@@ -187,7 +187,7 @@ const kerdesek = [
     kerdes: "Mi a minimum KKI a tanulmányi ösztöndíjhoz?",
     valaszok: [
       { szoveg: "4,4", helyes: true },
-      { szoveg: "3,0", helyes: false },
+      { szoveg: "3,9", helyes: false },
       { szoveg: "4,0", helyes: false },
       { szoveg: "4,8", helyes: false }
     ]
@@ -202,21 +202,21 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Milyen esetben indulhat fegyelmi eljárás?",
+    kerdes: "Mely tagok alkotját az FB-t?",
     valaszok: [
-      { szoveg: "Ha a hallgató megszegi a szabályzatot", helyes: true },
-      { szoveg: "Ha nem ír vizsgát", helyes: false },
-      { szoveg: "Ha késik az óráról", helyes: false },
-      { szoveg: "Ha szóbeli vizsgát választ", helyes: false }
+      { szoveg: "A bizottság elnöke, továbbá karonként egy-egy oktató és két hallgató", helyes: true },
+      { szoveg: "EHÖK elnök + kari elnökök", helyes: false },
+      { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
+      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false }
     ]
   },
   {
-    kerdes: "Mi számít tanulmányi teljesítménynek?",
+    kerdes: "Mit rövidít, az FB",
     valaszok: [
-      { szoveg: "A megszerzett kredit és érdemjegyek", helyes: true },
-      { szoveg: "A részvétel az órákon", helyes: false },
-      { szoveg: "A hallgatói aktivitás", helyes: false },
-      { szoveg: "A közéleti tevékenység", helyes: false }
+      { szoveg: "Felülbírálati Bizottság", helyes: true },
+      { szoveg: "FaceBook", helyes: false },
+      { szoveg: "Felelős Bizottság", helyes: false },
+      { szoveg: "Forgalmi Bizottság", helyes: false }
     ]
   },
   {
@@ -235,6 +235,24 @@ const kerdesek = [
       { szoveg: "Leiratkozással", helyes: false },
       { szoveg: "Vizsgamentességgel", helyes: false },
       { szoveg: "Tanulmányi engedéllyel", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hol kell elintézni ha egy hallgató szeretne passzíváltatni?",
+    valaszok: [
+      { szoveg: "Neptun", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "A modulo felületén", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgáltán", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mely esetben NEM szűnik meg a hallgatói jogviszony?",
+    valaszok: [
+      { szoveg: "Ha a hallgató megbukott az egyik vizsgáján", helyes: true },
+      { szoveg: "Ha a hallgató abszolutóriumot szerzett", helyes: false },
+      { szoveg: "Ha a hallgatót egy másik felsőoktatás intézménybe felvettek", helyes: false },
+      { szoveg: "Ha a hallgató úgy dönt és végrehajtja a szükséges lépéseket", helyes: false }
     ]
   },
   {
@@ -279,16 +297,84 @@ const kerdesek = [
       { szoveg: "Legfeljebb két félévet", helyes: true },
       { szoveg: "Három félévet", helyes: false },
       { szoveg: "Egy félévet", helyes: false },
-      { szoveg: "Korlátlanul", helyes: false }
+      { szoveg: "Korlátlan számban", helyes: false }
     ]
   },
   {
-    kerdes: "Melyik dokumentum tartalmazza a képzési követelményeket?",
+    kerdes: "Mi a definiciója az abszolutóriumnak?",
     valaszok: [
-      { szoveg: "Képzési és Kimeneti Követelmények (KKK)", helyes: true },
-      { szoveg: "Tanulmányi szerződés", helyes: false },
-      { szoveg: "TVSZ melléklet", helyes: false },
-      { szoveg: "Rektori utasítás", helyes: false }
+      { szoveg: "Vizsgák eredményes letétele (kivéve diplomamunka), tanulmányoki követelmények igazolja értékelés nélkül", helyes: true },
+      { szoveg: "Teljes mértékben 'osztályelső', neki van a legjobb félévvégi eredménye és ezért ösztöndíjat kap", helyes: false },
+      { szoveg: "Csak a kötelező tantárgyak teljesítését jelenti, a szabadon választható tárgyakat nem számítják bele", helyes: false },
+      { szoveg: "Azonnali diploma megszerzését biztosító okirat, függetlenül a teljesített vizsgáktól", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hány félévet lehet passzíválni egy képzésen összesen?",
+    valaszok: [
+      { szoveg: "Négy félévet", helyes: true },
+      { szoveg: "Három félévet", helyes: false },
+      { szoveg: "Egy félévet", helyes: false },
+      { szoveg: "Korlátlan számban", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mennyi a költsége egy tantárgy újrafelvételének?",
+    valaszok: [
+      { szoveg: "1. alkalom: 4500Ft, további: 9000Ft", helyes: true },
+      { szoveg: "1. alkalom: 5000Ft, további: 10000Ft", helyes: false },
+      { szoveg: "1. alkalom: 5500Ft, további: 11000Ft", helyes: false },
+      { szoveg: "1. alkalom: 6000Ft, további: 12000Ft", helyes: false },
+
+    ]
+  },
+  {
+    kerdes: "Mennyi a költsége az Oklevélmelléklet kiállításának?",
+    valaszok: [
+      { szoveg: "12000Ft", helyes: true },
+      { szoveg: "13000Ft", helyes: false },
+      { szoveg: "14000Ft", helyes: false },
+      { szoveg: "15000Ft", helyes: false },
+
+    ]
+  },
+  {
+    kerdes: "Mennyi a költsége egy Záróvizsgának jogviszonyon kívül",
+    valaszok: [
+      { szoveg: "20000Ft", helyes: true },
+      { szoveg: "25000Ft", helyes: false },
+      { szoveg: "15000Ft", helyes: false },
+      { szoveg: "17000Ft", helyes: false },
+
+    ]
+  },
+  {
+    kerdes: "Melyik NEM IGAZ a 2025/26os tanévben kezdett hallgatói nyelvi követelményekre?",
+    valaszok: [
+      { szoveg: "Bemeneti szint C1", helyes: true },
+      { szoveg: "Üzleti és társadalomtudományi idegen nyelv", helyes: false },
+      { szoveg: "nyelvvizsgával nem kiváltható", helyes: false },
+      { szoveg: "Üzleti és társadalomtudományi idegen nyelv C1-es kurzus", helyes: false },
+
+    ]
+  },
+  {
+    kerdes: "Mennyi a költsége a kredittúllépésnek 10%on felül?",
+    valaszok: [
+      { szoveg: "6000Ft / kredit", helyes: true },
+      { szoveg: "6500Ft / kredit", helyes: false },
+      { szoveg: "7000Ft / kredit", helyes: false },
+      { szoveg: "5000Ft / kredit", helyes: false },
+
+    ]
+  },
+  {
+    kerdes: "Mit rövidít, a HTJB?",
+    valaszok: [
+      { szoveg: "Hallgatói Térítések és Juttatások Bizottsága", helyes: true },
+      { szoveg: "Hallgatói Tudás Bővítési Bizottsága", helyes: false },
+      { szoveg: "Halasztott Tanórai Jelenléti Bizottság", helyes: false },
+      { szoveg: "Halmozott Tehetetlenség Jobbléti Bizottsága", helyes: false }
     ]
   },{
     kerdes: "Mit jelent a HKR rövidítés?",
@@ -309,30 +395,30 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mikor kell beiratkozni az első félévre?",
+    kerdes: "Mely tagokból áll össze, az HTJB",
     valaszok: [
-      { szoveg: "A beiratkozási időszakban", helyes: true },
-      { szoveg: "A vizsgaidőszakban", helyes: false },
-      { szoveg: "A passzív időszakban", helyes: false },
-      { szoveg: "Bármikor a félév alatt", helyes: false }
+      { szoveg: "A bizottság elnöke az általános rektorhelyettes, a bizottság alelnöke az EHÖK delegáltja, továbbá karonként egy-egy oktató és egy-egy hallgató", helyes: true },
+      { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
+      { szoveg: "Az elnök, továbbá karonként egy-egy oktató", helyes: false },
+      { szoveg: "EHÖK elnök + kari elnökök", helyes: false }
     ]
   },
   {
-    kerdes: "Mi történik, ha a hallgató fegyelmi vétséget követ el?",
+    kerdes: "Mit rövidít az SHSB",
     valaszok: [
-      { szoveg: "Fegyelmi eljárás indul ellene", helyes: true },
-      { szoveg: "Megrovást kap szóban", helyes: false },
-      { szoveg: "Tanulmányi figyelmeztetést kap", helyes: false },
-      { szoveg: "Csak a DJB dönthet róla", helyes: false }
+      { szoveg: "Sajátos Szükségletű Hallgatókat Segítő Bizottság", helyes: true },
+      { szoveg: "Sportolói Habilitációs és Szabadidős Bizottság", helyes: false },
+      { szoveg: "Speciális Hallgatói Szolgáltatások Bizottsága", helyes: false },
+      { szoveg: "Szociális Helyzetű Hallgatók Segítő Bizottság", helyes: false }
     ]
   },
   {
-    kerdes: "Milyen értékelési formák léteznek a BGE-n?",
+    kerdes: "Mely tagokból áll össze az SHSB",
     valaszok: [
-      { szoveg: "Érdemjegy és aláírás", helyes: true },
-      { szoveg: "Csak vizsga", helyes: false },
-      { szoveg: "Pontszám alapú", helyes: false },
-      { szoveg: "Szóbeli értékelés", helyes: false }
+      { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: true },
+      { szoveg: "EHÖK elnök +   kari elnökök", helyes: false },
+      { szoveg: "Az elnök, továbbá karonként egy-egy oktató", helyes: false },
+      { szoveg: "A bizottság elnöke, továbbá karonként egy-egy oktató és két hallgató", helyes: false }
     ]
   },
   {
@@ -345,30 +431,30 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mikor adható meg a hallgatói jogviszony szüneteltetése?",
+    kerdes: "Mit rövidít a KÁB?",
     valaszok: [
-      { szoveg: "Kérelem alapján", helyes: true },
-      { szoveg: "Automatikusan", helyes: false },
-      { szoveg: "A DJB döntése alapján", helyes: false },
-      { szoveg: "Csak betegség esetén", helyes: false }
+      { szoveg: "Kreditátviteli Bizottság", helyes: true },
+      { szoveg: "Kultúrát Átívelési Bizottság", helyes: false },
+      { szoveg: "Költség Átváltási Bizottság", helyes: false },
+      { szoveg: "Környezet Ápoló Bizottság", helyes: false }
     ]
   },
   {
-    kerdes: "Mi a vizsgaidőszak célja?",
+    kerdes: "Mely tagokból áll a KÁB?",
     valaszok: [
-      { szoveg: "A féléves tantárgyak teljesítése", helyes: true },
-      { szoveg: "A tantárgyak újrafelvétele", helyes: false },
-      { szoveg: "A tanterv jóváhagyása", helyes: false },
-      { szoveg: "A hallgatói státusz ellenőrzése", helyes: false }
+      { szoveg: "Az elnök, továbbá karonként egy-egy oktató", helyes: true },
+      { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
+      { szoveg: "EHÖK elnök +   kari elnökök", helyes: false },
+      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false }
     ]
   },
   {
-    kerdes: "Mit jelent a 'megajánlott jegy'?",
+    kerdes: "Hogy hívják a Rektorunkat?",
     valaszok: [
-      { szoveg: "Vizsga nélküli értékelést", helyes: true },
-      { szoveg: "Szóbeli vizsgát", helyes: false },
-      { szoveg: "Kötelező újravizsgát", helyes: false },
-      { szoveg: "Csak elméleti jegyet", helyes: false }
+      { szoveg: "Dr. Andor György", helyes: true },
+      { szoveg: "Dr. habil. Andor György", helyes: false },
+      { szoveg: "Prof. Andor György", helyes: false },
+      { szoveg: "Dr. Antal György", helyes: false }
     ]
   },
   {
@@ -381,21 +467,21 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hány kredit szükséges a diploma megszerzéséhez alapképzésen?",
+    kerdes: "Hogy hívják az Oktatási Központ vezetőjét?",
     valaszok: [
-      { szoveg: "180 kredit", helyes: true },
-      { szoveg: "150 kredit", helyes: false },
-      { szoveg: "200 kredit", helyes: false },
-      { szoveg: "240 kredit", helyes: false }
+      { szoveg: "Szőke Erika Annamária", helyes: true },
+      { szoveg: "Dr. Kalló Noémi", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false },
+      { szoveg: "Dr. Jancsik András", helyes: false }
     ]
   },
   {
-    kerdes: "Melyik időszakban nem lehet vizsgázni?",
+    kerdes: "Hogy hívják az általános rektorhelyettesünket?",
     valaszok: [
-      { szoveg: "A szorgalmi időszakban", helyes: true },
-      { szoveg: "A vizsgaidőszakban", helyes: false },
-      { szoveg: "A pótlási időszakban", helyes: false },
-      { szoveg: "A tanév végén", helyes: false }
+      { szoveg: "Dr. Jancsik András", helyes: true },
+      { szoveg: "Dr. Kiss Kornélia", helyes: false },
+      { szoveg: "Dr. Kardos Barbara", helyes: false },
+      { szoveg: "Prof. Dr. Király Gábor", helyes: false }
     ]
   },
   {
@@ -408,23 +494,384 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mi a záróvizsga célja?",
+    kerdes: "Hogy hívják az Oktatási rektorhelyettesünket?",
     valaszok: [
-      { szoveg: "A tanulmányok lezárása és diploma megszerzése", helyes: true },
-      { szoveg: "A vizsgaidőszak megnyitása", helyes: false },
-      { szoveg: "A tantárgyfelvétel ellenőrzése", helyes: false },
-      { szoveg: "A szorgalmi jegyek kiosztása", helyes: false }
+      { szoveg: "Dr. Kalló Noémi", helyes: true },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false },
+      { szoveg: "Dr. Jancsik András", helyes: false },
+      { szoveg: "Forman Norbert", helyes: false }
     ]
   },
   {
-    kerdes: "Mennyi a maximális tanulmányi idő alapképzésen?",
+    kerdes: "Hogy hívják a Tudományos rektorhelyettesünket?",
     valaszok: [
-      { szoveg: "12 félév", helyes: true },
-      { szoveg: "8 félév", helyes: false },
-      { szoveg: "10 félév", helyes: false },
-      { szoveg: "14 félév", helyes: false }
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Dr. Borzán Anita", helyes: false },
+      { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a MÜKK Dékánunkat?",
+    valaszok: [
+      { szoveg: "Dr. habil. Zelena András", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Dr. Jancsik András", helyes: false },
+      { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az NGK Dékánunkat?",
+    valaszok: [
+      { szoveg: "Dr. Kiss Kornélia ", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Dr. Jancsik András", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Dékánunkat?",
+    valaszok: [
+      { szoveg: "Prof. Dr. Király Gábor", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Dr. Jancsik András", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a PSZK Dékánunkat?",
+    valaszok: [
+      { szoveg: "Dr. Kardos Barbara", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Dr. Jancsik András", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az általános dékánhelyettesünket?",
+    valaszok: [
+      { szoveg: "Dr. Németh Krisztina", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Prof. Dr. Király Gábor", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az Oktatási dékánhelyettesünket?",
+    valaszok: [
+      { szoveg: "Dr. Pollák Zoltán", helyes: true },
+      { szoveg: "Szőke Erika Annamária", helyes: false },
+      { szoveg: "Dr. Kardos Barbara", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a Nemzetközi kari vezetőnket?",
+    valaszok: [
+      { szoveg: "Dr. Siklósi Ágnes", helyes: true },
+      { szoveg: "Dr. Pollák Zoltán", helyes: false },
+      { szoveg: "Dr. Kardos Barbara", helyes: false },
+      { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a Tudományos kari vezetőnket?",
+    valaszok: [
+      { szoveg: "Dr. Hegedűs Szilárd", helyes: true },
+      { szoveg: "Dr. Pollák Zoltán", helyes: false },
+      { szoveg: "Dr. Kardos Barbara", helyes: false },
+      { szoveg: "Dr. Siklósi Ágnes", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az Informatika Tanszék vezetőnket?",
+    valaszok: [
+      { szoveg: "Forman Norbert", helyes: true },
+      { szoveg: "Dr. Pollák Zoltán", helyes: false },
+      { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a Kontrolling Tanszék vezetőnket?",
+    valaszok: [
+      { szoveg: "Dr. Borzán Anita", helyes: true },
+      { szoveg: "Forman Norbert", helyes: false },
+      { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a Pénzügyi Tanszék vezetőnket?",
+    valaszok: [
+      { szoveg: "Dr. Fellegi Miklós", helyes: true },
+      { szoveg: "Forman Norbert", helyes: false },
+      { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: false },
+      { szoveg: "Dr. Pollák Zoltán", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a Szémviteli Tanszék vezetőnket?",
+    valaszok: [
+      { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: true },
+      { szoveg: "Forman Norbert", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false },
+      { szoveg: "Dr. Pollák Zoltán", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK általános dékánhelyettest?",
+    valaszok: [
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: true },
+      { szoveg: "Szirtesné Kiss Ágota", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false },
+      { szoveg: "Dr. habil. Kozma Tímea", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Oktatási dékánhelyettest?",
+    valaszok: [
+      { szoveg: "Dr. Németh Szilárd", helyes: true },
+      { szoveg: "Szirtesné Kiss Ágota", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false },
+      { szoveg: "Dr. habil. Kozma Tímea", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Nemzetközi kari vezetőt?",
+    valaszok: [
+      { szoveg: "Szirtesné Kiss Ágota", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false },
+      { szoveg: "Dr. habil. Kozma Tímea", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Tudományos kari vezetőt?",
+    valaszok: [
+      { szoveg: "Dr. habil. Kozma Tímea", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. Fellegi Miklós", helyes: false },
+      { szoveg: "Szirtesné Kiss Ágota", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Emberi Erőforrás Fejlesztéi tanszék vezetőjét?",
+    valaszok: [
+      { szoveg: "Prof. Dr. Csillag Sára", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. Pecze Krisztina", helyes: false },
+      { szoveg: "Szirtesné Kiss Ágota", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Folyamatmenedzsment tanszék vezetőjét?",
+    valaszok: [
+      { szoveg: "Dr. habil. Kása Richárd", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. Pecze Krisztina", helyes: false },
+      { szoveg: "Prof. Dr. Csillag Sára", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Vállakozás és Innováció tanszék vezetőjét?",
+    valaszok: [
+      { szoveg: "Dr. Pecze Krisztina", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. habil. Kása Richárd", helyes: false },
+      { szoveg: "Prof. Dr. Csillag Sára", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Vállakozás és Innováció tanszék vezetőjét?",
+    valaszok: [
+      { szoveg: "Dr. Pecze Krisztina", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. habil. Kása Richárd", helyes: false },
+      { szoveg: "Prof. Dr. Csillag Sára", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják az MK Vezetés és Szervezés tanszék vezetőjét?",
+    valaszok: [
+      { szoveg: "Dr. Dén-Nagy Ildikó", helyes: true },
+      { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
+      { szoveg: "Dr. habil. Kása Richárd", helyes: false },
+      { szoveg: "Prof. Dr. Csillag Sára", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen döntésekról hozhat döntést a Rektor az alábbiak közül?",
+    valaszok: [
+      { szoveg: "Hallgatói jogviszony megszüntetése fizetési hátralék miatt", helyes: true },
+      { szoveg: "Félév utólagos aktiválása", helyes: false },
+      { szoveg: "Vizsgáról való távolmaradás igazolása", helyes: false },
+      { szoveg: "Hallgatói kreditátviteli kérelmek", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen döntésekról hozhat döntést a HSZI az alábbiak közül?",
+    valaszok: [
+      { szoveg: "Hallgatói kreditátviteli kérelmek", helyes: true },
+      { szoveg: "Kollégiumi méltányosság", helyes: false },
+      { szoveg: "Vendéghallgatói jogviszony létrehozása", helyes: false },
+      { szoveg: "Részképzés engedélyezése", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen döntésekról hozhat döntést a Dékán az alábbiak közül?",
+    valaszok: [
+      { szoveg: "Kollégiumi térítési díj megfizetésére adható kedvezmény", helyes: true },
+      { szoveg: "Neptunban szereplő eredmények javítása", helyes: false },
+      { szoveg: "Hallgatói jogviszony megszüntetése fizetési hátralék miatt", helyes: false },
+      { szoveg: "Félév utólagos aktiválása", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Ha egy jelentkező pótfelvételizni szeretne, akkor hány helyre tudja beadni a kérelmét?",
+    valaszok: [
+      { szoveg: "Csak 1 helyre", helyes: true },
+      { szoveg: "Összesen 2 helyre", helyes: false },
+      { szoveg: "Akár 3 helyre is", helyes: false },
+      { szoveg: "Bármennyi helyre", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Ha egy jelentkező pótfelvételizni szeretne, akkor hány helyre tudja beadni a kérelmét?",
+    valaszok: [
+      { szoveg: "Csak 1 helyre", helyes: true },
+      { szoveg: "Összesen 2 helyre", helyes: false },
+      { szoveg: "Akár 3 helyre is", helyes: false },
+      { szoveg: "Bármennyi helyre", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mi formában lehet lebonyolítani a beiratkozást?",
+    valaszok: [
+      { szoveg: "Neptun -> Ügyintézés -> Féléves regisztráció", helyes: true },
+      { szoveg: "Email formátumban", helyes: false },
+      { szoveg: "A modulo felületén", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgáltán", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mi NEM a beirtakozás aktiválási feltétele?",
+    valaszok: [
+      { szoveg: "", helyes: true },
+      { szoveg: "Ne legyen pénzügyi tartozás", helyes: false },
+      { szoveg: "Önköltségi díj első részlet befizetése", helyes: false },
+      { szoveg: "Legalább 1 tárgy felvétele", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik időszakban lehet felvenni a tárgyakat az adott félévre?",
+    valaszok: [
+      { szoveg: "A szorgalmi időszak 1. hetében", helyes: true },
+      { szoveg: "A félév első 1 hónapjában", helyes: false },
+      { szoveg: "Bármikor szabadon felvehető, és leadható", helyes: false },
+      { szoveg: "A félév első felében", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Az ajánlott kreditmennyiség maximum mennyi kredittel térhet el 30tól?",
+    valaszok: [
+      { szoveg: "Maximum 3", helyes: true },
+      { szoveg: "Maximum 6", helyes: false },
+      { szoveg: "Maximum 12", helyes: false },
+      { szoveg: "Maximum 9", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mi a kreditérték meghatározása?",
+    valaszok: [
+      { szoveg: "Az összes hallgatói tanulmányi munkaóra alapján", helyes: true },
+      { szoveg: "Egy bizonyos vizsgán elért eredmény", helyes: false },
+      { szoveg: "Egy tantárgy ára, ha a hallgató önköltséges formán lenne (kredit * 10.000Ft)", helyes: false },
+      { szoveg: "Egy ösztöndíj pályázása után lesz lehetőségünk ezeket gyűjteni", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Az alapképzésen az első 5 aktív félévben hány db kreditet kell teljesíteni?",
+    valaszok: [
+      { szoveg: "75", helyes: true },
+      { szoveg: "55", helyes: false },
+      { szoveg: "150", helyes: false },
+      { szoveg: "90", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mi a definíciója a következőnek: 'A korábban tanult tárgyaid mennyire egyeznek meg a mostani tantervednek (75% egyezőség szükséges)'?",
+    valaszok: [
+      { szoveg: "ekvivalenciavizsgálat", helyes: true },
+      { szoveg: "Kreditátvitel", helyes: false },
+      { szoveg: "Abszolutórium", helyes: false },
+      { szoveg: "HKR", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Ki NEM kezdeményezhet kreditelismerést?",
+    valaszok: [
+      { szoveg: "Az általános Dékánhelyettes", helyes: true },
+      { szoveg: "Hallgató", helyes: false },
+      { szoveg: "Oktató", helyes: false },
+      { szoveg: "Szakfelelős", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik NEM IGAZ a megajánlot jeggyel kapcsolatban?",
+    valaszok: [
+      { szoveg: "Önköltséges hallgató kell legyél", helyes: true },
+      { szoveg: "Nem kötelező elfogadni", helyes: false },
+      { szoveg: "Vizsgaközpontban kell megírni", helyes: false },
+      { szoveg: "Első zh minimum 50%-osan teljesíteni kell", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik NEM IGAZ a megajánlot jeggyel kapcsolatban?",
+    valaszok: [
+      { szoveg: "Önköltséges hallgató kell legyél", helyes: true },
+      { szoveg: "Nem kötelező elfogadni", helyes: false },
+      { szoveg: "Vizsgaközpontban kell megírni", helyes: false },
+      { szoveg: "Első zh minimum 50%-osan teljesíteni kell", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mennyi a költsége minden 3. és további ismétlő- és javítóvizsga esetén?",
+    valaszok: [
+      { szoveg: "4500Ft", helyes: true },
+      { szoveg: "5000Ft", helyes: false },
+      { szoveg: "6000Ft", helyes: false },
+      { szoveg: "5500Ft", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mennyi a költsége egy vizsgáról való igazolatlan távolmaradásnak?",
+    valaszok: [
+      { szoveg: "Első alkalommal 6000Ft, minden további alkalom 12000Ft", helyes: true },
+      { szoveg: "Első alkalommal 5000Ft, minden további alkalom 10000Ft", helyes: false },
+      { szoveg: "Első alkalommal 5500Ft, minden további alkalom 11000Ft", helyes: false },
+      { szoveg: "Első alkalommal 6500Ft, minden további alkalom 13000Ft", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mit NEM SZABAD vinned egy Vizsgaközpontban megírt ZH-ra",
+    valaszok: [
+      { szoveg: "Nem zárható italt", helyes: true },
+      { szoveg: "Fényképes igazolványt", helyes: false },
+      { szoveg: "Számológépet", helyes: false },
+      { szoveg: "Tollat", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mit NEM SZABAD vinned egy Vizsgaközpontban megírt ZH-ra",
+    valaszok: [
+      { szoveg: "Nem zárható italt", helyes: true },
+      { szoveg: "Fényképes igazolványt", helyes: false },
+      { szoveg: "Számológépet", helyes: false },
+      { szoveg: "Tollat", helyes: false }
     ]
   }
+
 
 
 ]
