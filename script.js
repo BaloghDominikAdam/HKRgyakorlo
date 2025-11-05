@@ -531,7 +531,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a MÜKK Dékánunkat?",
+    kerdes: "Hogy hívják a MÜKK Dékánt?",
     valaszok: [
       { szoveg: "Dr. habil. Zelena András", helyes: true },
       { szoveg: "Szőke Erika Annamária", helyes: false },
@@ -540,7 +540,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az NGK Dékánunkat?",
+    kerdes: "Hogy hívják az NGK Dékánt?",
     valaszok: [
       { szoveg: "Dr. Kiss Kornélia ", helyes: true },
       { szoveg: "Szőke Erika Annamária", helyes: false },
@@ -549,7 +549,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az MK Dékánunkat?",
+    kerdes: "Hogy hívják az MK Dékánt?",
     valaszok: [
       { szoveg: "Prof. Dr. Király Gábor", helyes: true },
       { szoveg: "Szőke Erika Annamária", helyes: false },
