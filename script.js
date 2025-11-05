@@ -1034,6 +1034,7 @@ function rosszValaszIdozitesLejarat() {
   setTimeout(() => {
     jatekDiv.style.display = "none";
     udvozloCont.style.display = "flex";
+    insideContainer.style.display = "none"
   }, 3000);
 }
 

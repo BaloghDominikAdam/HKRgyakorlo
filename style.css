@@ -84,7 +84,7 @@ body{
     font-size: 35px;
     width: 200px;
     height: 50px;
-
+    position: absolute;
     cursor: pointer;
     border: none;
     top: 13px;
@@ -102,7 +102,7 @@ body{
     display: none;
 
     width: 95%;
-    margin: auto;
+    /* margin: auto; */
         align-items: center;
 
     
@@ -150,7 +150,7 @@ body{
     text-align: center;
     margin-left: auto;
     padding: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     max-height: 70px;
 }
 
@@ -357,7 +357,14 @@ body{
 
   .osszegDiv{
     width: 30%;
-    font-size: 30px;
+    margin-top: 15px;
+  }
+  .osszegDiv p {
+        font-size: 30px;
+  }
+  .ujraGomb{
+    width: 13%;
+    font-size: 25px;
   }
 }
 
@@ -409,15 +416,21 @@ body{
   }
 
   .osszegDiv {
-    width: 60%;
+    width: 30%;
+
+
+  }
+  .osszegDiv p{
+    font-size: 25px;
+
 
   }
 
-  .ujraGomb p{
-    font-size: 24px;
+  /* .ujraGomb p{
+    font-size: px;
     width: 140px;
     height: 45px;
-  }
+  } */
 
   .tabla {
     padding: 20px;
@@ -431,6 +444,10 @@ body{
   #visszaMenuBtn {
     font-size: 18px;
     padding: 10px 20px;
+  }
+    .ujraGomb{
+
+    font-size: 18px;
   }
 }
 
@@ -460,5 +477,9 @@ body{
   .osszegDiv {
     width: 70%;
     font-size: 22px;
+  }
+  .ujraGomb{
+
+    font-size: 13px;
   }
 }
