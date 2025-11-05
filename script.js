@@ -169,7 +169,7 @@ const kerdesek = [
   {
     kerdes: "Mely tagokból áll össze, az OB",
     valaszok: [
-      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: true },
+      { szoveg: " EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: true },
       { szoveg: "EHÖK elnök +   kari elnökök", helyes: false },
       { szoveg: "Elnök, DJB elnökök", helyes: false },
       { szoveg: "A bizottság elnöke az általános rektorhelyettes, a bizottság alelnöke az EHÖK delegáltja", helyes: false }
@@ -179,7 +179,7 @@ const kerdesek = [
     kerdes: "Mely tagokból áll össze a Szenátus?",
     valaszok: [
       { szoveg: "EHÖK elnök + kari elnökök", helyes: true },
-      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false },
+      { szoveg: " EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false },
       { szoveg: "Elnök, DJB elnökök", helyes: false },
       { szoveg: "A bizottság elnöke az általános rektorhelyettes, a bizottság alelnöke az EHÖK delegáltja", helyes: false }
     ]
@@ -226,7 +226,7 @@ const kerdesek = [
       { szoveg: "A bizottság elnöke, továbbá karonként egy-egy oktató és két hallgató", helyes: true },
       { szoveg: "EHÖK elnök + kari elnökök", helyes: false },
       { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
-      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false }
+      { szoveg: " EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false }
     ]
   },
   {
@@ -280,7 +280,7 @@ const kerdesek = [
       { szoveg: "Három alkalom", helyes: true },
       { szoveg: "Egy alkalom", helyes: false },
       { szoveg: "Korlátlan", helyes: false },
-      { szoveg: "Kétszer", helyes: false }
+      { szoveg: "Kettő alkalom", helyes: false }
     ]
   },
   {
@@ -464,7 +464,7 @@ const kerdesek = [
       { szoveg: "Az elnök, továbbá karonként egy-egy oktató", helyes: true },
       { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
       { szoveg: "EHÖK elnök +   kari elnökök", helyes: false },
-      { szoveg: "EHÖK elnök delegál, EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false }
+      { szoveg: " EHÖK ELNÖK + EHÖK Tanulmányi Alelnök", helyes: false }
     ]
   },
   {
@@ -994,6 +994,7 @@ function mutatNyeremeny() {
       kiszallasOverlay.style.display = "none";
       jatekDiv.style.display = "none";
       udvozloCont.style.display = "flex";
+      insideContainer.style.display = "none"
       jagerSzamlalo = 1;
       frissitJager();
     };
