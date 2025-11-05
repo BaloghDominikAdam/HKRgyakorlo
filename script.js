@@ -1,6 +1,7 @@
 const udvozloCont = document.querySelector(".udvozloContainer");
 const jatekDiv = document.querySelector(".jatekDiv");
 const jatekGomb = document.querySelector(".jatekGomb");
+const insideContainer = document.querySelector(".insideContainer")
 
 const kerdesElem = document.querySelector(".kerdesDiv h3");
 const valaszokDiv = document.querySelector(".valaszokDiv");
@@ -11,7 +12,11 @@ const overlay = document.querySelector(".overlayNyeremeny");
 const listaElemek = document.querySelectorAll(".nyeremenyLista li");
 
 
-
+const focimAudio = document.querySelector(".focimAudio");
+const rosszAudio = document.querySelector(".rosszAudio");
+const joValaszAudio = document.querySelector(".joValaszAudio");
+const kerdesAudio = document.querySelector(".kerdesAudio");
+const cheering = document.querySelector(".cheering");
 
 
 let aktualisKerdes = 0;
@@ -20,14 +25,28 @@ let jagerSzamlalo = 1;
 let idozitoInterval;
 
 
+focimAudio.volume = 0.04;
+kerdesAudio.volume = 0.25;
+joValaszAudio.volume = 0.2;
+rosszAudio.volume = 0.2;
+cheering.volume = 0.3;
+
+function stopAllAudio() {
+  [focimAudio, rosszAudio, joValaszAudio, kerdesAudio, cheering].forEach((audio) => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+}
+
+
 const kerdesek = [
   {
     kerdes: "Mennyi idő áll rendelkezésre, az oklevél megszerzésére ?",
     valaszok: [
-      { szoveg: "a képzési idő másfélszeresén belül", helyes: true },
-      { szoveg: "a képzési idő kétszeresén belül", helyes: false },
-      { szoveg: "az adott szak meghirdetett félévei alatt", helyes: false },
-      { szoveg: "az adott szak meghirdetett félévei plusz 3 hónap alatt", helyes: false }
+      { szoveg: "a képzési idő másfélszerese", helyes: true },
+      { szoveg: "a képzési idő kétszerese", helyes: false },
+      { szoveg: "az adott szak meghirdetett félévei", helyes: false },
+      { szoveg: "az adott szak meghirdetett félévei plusz 3 hónap", helyes: false }
     ]
   },
   {
@@ -395,9 +414,9 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mely tagokból áll össze, az HTJB",
+    kerdes: "Mely tagokból áll össze, a HTJB?",
     valaszok: [
-      { szoveg: "A bizottság elnöke az általános rektorhelyettes, a bizottság alelnöke az EHÖK delegáltja, továbbá karonként egy-egy oktató és egy-egy hallgató", helyes: true },
+      { szoveg: "A bizottság elnöke és az általános rektorhelyettes", helyes: true },
       { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
       { szoveg: "Az elnök, továbbá karonként egy-egy oktató", helyes: false },
       { szoveg: "EHÖK elnök + kari elnökök", helyes: false }
@@ -611,7 +630,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Szémviteli Tanszék vezetőnket?",
+    kerdes: "Hogy hívják a Számviteli Tanszék vezetőnket?",
     valaszok: [
       { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: true },
       { szoveg: "Forman Norbert", helyes: false },
@@ -877,6 +896,19 @@ const kerdesek = [
 ]
 
 
+window.addEventListener("load", () => {
+  stopAllAudio();
+  focimAudio.volume = 0.05;
+  focimAudio.play().catch(() => {
+    document.addEventListener("click", () => focimAudio.play(), { once: true });
+  });
+});
+
+function playKerdesHang() {
+  stopAllAudio();
+  kerdesAudio.currentTime = 0;
+  kerdesAudio.play();
+}
 
 
 function kever(tomb) {
@@ -947,6 +979,11 @@ function mutatNyeremeny() {
 
 
     kiszallokBtn.onclick = () => {
+
+    stopAllAudio();
+    cheering.currentTime = 0;
+    cheering.play();
+      
       overlay.style.display = "none";
       kiszallasOverlay.style.display = "flex";
       kiszallasUzenet.textContent = `Elértél a ${jagerSzamlalo}. szintre és ${jagerSzamlalo} Jäger shotot szereztél! 🍀`;
@@ -986,6 +1023,9 @@ function rosszValaszIdozitesLejarat() {
     else el.style.backgroundColor = "red";
   });
 
+  rosszAudio.currentTime = 0;
+  rosszAudio.play();
+
   kerdesElem.textContent = "⏰ Lejárt az idő! Újrakezdés...";
   jagerSzamlalo = 1;
   frissitJager();
@@ -997,7 +1037,10 @@ function rosszValaszIdozitesLejarat() {
 }
 
 
-
+// function playKerdesHang(){
+//     kerdesaudio.play();
+//     kerdesaudio.volume = 0.5;
+// }
 
 
 
@@ -1006,22 +1049,29 @@ jatekGomb.addEventListener("click", (e) => {
     e.preventDefault();
     udvozloCont.style.display = "none";
     jatekDiv.style.display = "grid";
+    insideContainer.style.display = "flex"
     kerdesek.sort(() => Math.random() - 0.5);
     aktualisKerdes = 0;
     jagerSzamlalo = 1;
     frissitJager();
     mutatKerdes();
+    
 });
 
 
 
 function mutatKerdes() {
+  playKerdesHang();
   inditIdozito();
+  kerdesAudio.currentTime = 0;
+  kerdesAudio.play();
     if (aktualisKerdes >= kerdesek.length) {
         kerdesElem.textContent = `🎉 Gratulálok, vége a játéknak! A nyereményed: ${jagerSzamlalo} db Jäger shot`;
         valaszokDiv.innerHTML = "";
         return;
     }
+
+   
 
     const kerdes = kerdesek[aktualisKerdes];
     kerdesElem.textContent = kerdes.kerdes;
@@ -1054,6 +1104,10 @@ function mutatKerdes() {
   jagerSzamlalo++;
   frissitJager();
 
+  stopAllAudio();
+  joValaszAudio.currentTime = 0;
+        joValaszAudio.play();
+  
   
   setTimeout(() => {
     mutatNyeremeny();
@@ -1062,6 +1116,9 @@ function mutatKerdes() {
      else {
         div.style.backgroundColor = "red";
 
+        stopAllAudio();
+        rosszAudio.currentTime = 0;
+        rosszAudio.play();
        
         const helyesValasz = Array.from(osszesValasz).find((valElem, index) =>
           kerdes.valaszok.some(
@@ -1096,3 +1153,8 @@ function frissitJager() {
 ujraGomb.addEventListener("click", () => {
     location.reload();
 });
+
+
+
+
+
