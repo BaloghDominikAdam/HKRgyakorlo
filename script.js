@@ -899,9 +899,16 @@ const kerdesek = [
 window.addEventListener("load", () => {
   stopAllAudio();
   focimAudio.volume = 0.05;
-  focimAudio.play().catch(() => {
-    document.addEventListener("click", () => focimAudio.play(), { once: true });
-  });
+
+  // Ha az első kattintás a "Játék" gomb, akkor ne induljon el a főcímzene
+  document.addEventListener("click", (event) => {
+    const jatekGomb = document.querySelector(".jatekGomb");
+    
+    // Ha NEM a játék gombra kattintott, akkor indítja el a zenét
+    if (!jatekGomb.contains(event.target)) {
+      focimAudio.play();
+    }
+  }, { once: true });
 });
 
 function playKerdesHang() {
