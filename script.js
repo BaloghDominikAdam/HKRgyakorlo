@@ -275,6 +275,249 @@ const kerdesek = [
     ]
   },
   {
+    kerdes: "Milyen lehet a pályázók köre, a BGE ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Alapképzés, nappali, önköltséges finanszírozási forma", helyes: true },
+      { szoveg: "Mesterképzés, nappali, önköltséges finanszírozási forma", helyes: false },
+      { szoveg: "Alapképzés, nappali, állami támogatott forma", helyes: false },
+      { szoveg: "Mesterképzés, nappali, állami támogatott forma", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mi a célja, a BGE ösztöndíjnak?",
+    valaszok: [
+      { szoveg: "Kiemelkedő tanulmánnyal eredménnyel és szociálisan rászoruló ÖNKÖLTSÉGES hallgatók támogatása.", helyes: true },
+      { szoveg: "Állami támogatott, kiemelkedő tanulmányi eredménnyel rendelkező hallgatók további ösztönzése.", helyes: false },
+      { szoveg: "Önköltséges, gyenge tanulmányi eredménnyel rendelkező hallgatók ösztönzése.", helyes: false },
+      { szoveg: "Külföldi tanulmányiutak teljes körű finanszírozása kiemelkedő tanulmányi eredménnyel rendelkezp hallgatók számára.", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik NEM feltétel a BGE ösztöndíj megszerzéséhez?",
+    valaszok: [
+      { szoveg: "Aktív részvétel legalább két egyetemi sportversenyen.", helyes: true },
+      { szoveg: "Legalább 2 lezárt aktív félév", helyes: false },
+      { szoveg: "Féléves átlagban legalább 30 kredit teljesítése", helyes: false },
+      { szoveg: "Az összesített limitált korrigált kreditindexe vagy összesített korrigált kreditindexminimum 3,5", helyes: false }
+    ]
+  },
+  {
+    kerdes: "A BGE ösztöndíj keretein belül, hány %-át kaphatják vissza a hallgatók, az adott félévre?",
+    valaszok: [
+      { szoveg: "50%", helyes: true },
+      { szoveg: "75%", helyes: false },
+      { szoveg: "25%", helyes: false },
+      { szoveg: "62%", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Melyik felületen kell pályázni a BGE ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunnon keresztül", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen lehet a pályázók köre, az Egyetemi sportösztöndíjra?",
+    valaszok: [
+      { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: true },
+      { szoveg: "Alapképzés, nappali, önköltséges", helyes: false },
+      { szoveg: "Alapképzés, nappali, állami", helyes: false },
+      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen lehet a pályázók köre, a Közéleti ösztöndíjra?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
+      { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen lehet a pályázók köre, a Szakmai-tudományos ösztöndíjra?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
+      { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen lehet a pályázók köre, a Kiemelt Tanulmányi ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: true },
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen lehet a pályázók köre, a Nemzeti-felsőoktatási ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
+      { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Milyen lehet a pályázók köre, a Tanulmányi ösztöndíjra?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, államis", helyes: true },
+      { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hány félévre, és milyen gyakorisággal jár a Tanulmányi ösztöndíj?",
+    valaszok: [
+      { szoveg: "Egy félévre jár havi szinten", helyes: true },
+      { szoveg: "Két félévre jár havi szinten", helyes: false },
+      { szoveg: "Három félévre jár havi szinten", helyes: false },
+      { szoveg: "Négy félévre jár havi szinten", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Az intézmény államilag támogatott teljes idejű képzésben részt vevő hallgatóinak legfeljebb hány % részesülhet Tanulmányi ösztöndíjban?",
+    valaszok: [
+      { szoveg: "50%", helyes: true },
+      { szoveg: "60%", helyes: false },
+      { szoveg: "70%", helyes: false },
+      { szoveg: "40%", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik felületen kell pályázni a Nemzeti-felsőoktatási ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunnon keresztül", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik felületen kell pályázni a Kiemelt Tanulmányi ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Neptunon keresztül", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Modulo", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Mennyi a jutattása a Kiemelt Tanulmányi ösztöndíjnak?",
+    valaszok: [
+      { szoveg: "Félévente, 150.000Ft egyszeri jutattása", helyes: true },
+      { szoveg: "Az egész képzés során, 150.000Ft egyszeri jutattása", helyes: false },
+      { szoveg: "Havonta, 150.000Ft egyszeri jutattása", helyes: false },
+      { szoveg: "Félévente 200.000Ft egyszeri jutattása", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Karonként MAX hány fő részesülhet a Kiemelt Tanulmányi ösztöndíjban?",
+    valaszok: [
+      { szoveg: "Karonként 8 fő", helyes: true },
+      { szoveg: "Karonként 10 fő", helyes: false },
+      { szoveg: "Karonként 5 fő", helyes: false },
+      { szoveg: "Karonként 20 fő", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Az alábbiak közül melyik feltétel IGAZ a Kiemelt Tanulmányi ösztöndíj megszerzésére?",
+    valaszok: [
+      { szoveg: "Legalább 27 felvett és teljesített kredit, valamint minimum 4,4 KKI", helyes: true },
+      { szoveg: "Legalább 28 felvett és teljesített kredit, valamint minimum 4,5 KKI", helyes: false },
+      { szoveg: "Legalább 27 felvett és teljesített kredit, valamint minimum 4,5 KKI", helyes: false },
+      { szoveg: "Legalább 28 felvett és teljesített kredit, valamint minimum 4,4 KKI", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Melyik állítás IGAZ a Kiemelt Tanulmányi ösztöndíjjal kapcsolatban?",
+    valaszok: [
+      { szoveg: "Csak a Zuglói Kampuszon van (PSZK,MK)", helyes: true },
+      { szoveg: "Karonként akár 20 fő is részesülhet benne", helyes: false },
+      { szoveg: "Minden hallgató automatikusan megkapja az első félév után, akinek elért minimum 4,4KKI-et.", helyes: false },
+      { szoveg: "Csak mesterképzésen részt vevő hallgatók pályázhatnak rá.", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Melyik NEM feltétele a Nemzeti-felsőoktatási ösztöndíj megszerzésére?",
+    valaszok: [
+      { szoveg: "Kötelező részvétel minden egyetemi rendezvényen a tanév során.", helyes: true },
+      { szoveg: "Legalább 55 teljesített kredit 2 aktív félév során", helyes: false },
+      { szoveg: "Előző 2 félévben 4,00 kreditindex, és szakmai munka (pl.: TDK, publikáció, szakkollégium)", helyes: false },
+      { szoveg: "Mintatantervben meghatározott kreditmennyiség időarányosan legalább 90%-os teljesítése elvárt", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik felületen kell pályázni az Egyetemi sportösztöndíjra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunnon keresztül", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Melyik felületen kell pályázni a Szakmai-tudományos ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Neptun", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Modulo", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen gyakoriságú, a Szakmai-tudományos ösztöndíj?",
+    valaszok: [
+      { szoveg: "Egyösszegű támogatás félévente", helyes: true },
+      { szoveg: "Egyösszegű támogatás évente", helyes: false },
+      { szoveg: "Egyösszegű támogatás havonta", helyes: false },
+      { szoveg: "Egyösszegű támogatás a képzés teljes ideje alatt", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik felületen kell pályázni a Közéleti ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunnon keresztül", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen gyakorisággal kell pályázni a Közéleti ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Havonta", helyes: true },
+      { szoveg: "Félévente", helyes: false },
+      { szoveg: "Évente", helyes: false },
+      { szoveg: "Képzés során csak egyszer lehet", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Mennyi kell legyen LEGALÁBB az utolsó aktív félévben elért KKI, az Egyetemi sportösztöndíjra való jelentkezésre?",
+    valaszok: [
+      { szoveg: "3,0 KKI", helyes: true },
+      { szoveg: "3,5 KKI", helyes: false },
+      { szoveg: "4,0 KKI", helyes: false },
+      { szoveg: "4,5 KKI", helyes: false }
+    ]
+  },
+  {
     kerdes: "Milyen formában kell jelentkezni kollégiumi helyért?",
     valaszok: [
       { szoveg: "Modulo felületen", helyes: true },
@@ -285,7 +528,7 @@ const kerdesek = [
   }
   ,
   {
-    kerdes: "Hogy szól, a pályázi követelménye a 'Bursa Hungarica'-ra?",
+    kerdes: "Milyen lehet a pályázók köre, a 'Bursa Hungarica'-ra?",
     valaszok: [
       { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
       { szoveg: "Alap- és mesterképzés, nappali, finanszírozási formától független", helyes: false },
@@ -496,15 +739,6 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mit jelent az abszolutórium?",
-    valaszok: [
-      { szoveg: "A tanulmányok lezárása vizsgák nélkül", helyes: true },
-      { szoveg: "A diploma kiállítása", helyes: false },
-      { szoveg: "A beiratkozás első félévre", helyes: false },
-      { szoveg: "A tantárgyfelvétel lezárása", helyes: false }
-    ]
-  },
-  {
     kerdes: "Mit rövidít a KÁB?",
     valaszok: [
       { szoveg: "Kreditátviteli Bizottság", helyes: true },
@@ -550,7 +784,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az általános rektorhelyettesünket?",
+    kerdes: "Hogy hívják a PSZK általános rektorhelyettest?",
     valaszok: [
       { szoveg: "Dr. Jancsik András", helyes: true },
       { szoveg: "Dr. Kiss Kornélia", helyes: false },
@@ -568,7 +802,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az Oktatási rektorhelyettesünket?",
+    kerdes: "Hogy hívják a PSZK Oktatási rektorhelyettest?",
     valaszok: [
       { szoveg: "Dr. Kalló Noémi", helyes: true },
       { szoveg: "Dr. habil. Szegedi Krisztina", helyes: false },
@@ -577,7 +811,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Tudományos rektorhelyettesünket?",
+    kerdes: "Hogy hívják a Tudományos rektorhelyettest?",
     valaszok: [
       { szoveg: "Dr. habil. Szegedi Krisztina", helyes: true },
       { szoveg: "Szőke Erika Annamária", helyes: false },
@@ -622,7 +856,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az általános dékánhelyettesünket?",
+    kerdes: "Hogy hívják a PSZK általános dékánhelyettest?",
     valaszok: [
       { szoveg: "Dr. Németh Krisztina", helyes: true },
       { szoveg: "Szőke Erika Annamária", helyes: false },
@@ -631,7 +865,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az Oktatási dékánhelyettesünket?",
+    kerdes: "Hogy hívják a PSZK Oktatási dékánhelyettest?",
     valaszok: [
       { szoveg: "Dr. Pollák Zoltán", helyes: true },
       { szoveg: "Szőke Erika Annamária", helyes: false },
@@ -640,7 +874,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Nemzetközi kari vezetőnket?",
+    kerdes: "Hogy hívják a PSZK Nemzetközi kari vezetőt?",
     valaszok: [
       { szoveg: "Dr. Siklósi Ágnes", helyes: true },
       { szoveg: "Dr. Pollák Zoltán", helyes: false },
@@ -649,7 +883,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Tudományos kari vezetőnket?",
+    kerdes: "Hogy hívják a PSZK Tudományos kari vezetőt?",
     valaszok: [
       { szoveg: "Dr. Hegedűs Szilárd", helyes: true },
       { szoveg: "Dr. Pollák Zoltán", helyes: false },
@@ -658,7 +892,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják az Informatika Tanszék vezetőnket?",
+    kerdes: "Hogy hívják a PSZK Informatika Tanszék vezetőt?",
     valaszok: [
       { szoveg: "Forman Norbert", helyes: true },
       { szoveg: "Dr. Pollák Zoltán", helyes: false },
@@ -667,7 +901,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Kontrolling Tanszék vezetőnket?",
+    kerdes: "Hogy hívják a PSZK Kontrolling Tanszék vezetőt?",
     valaszok: [
       { szoveg: "Dr. Borzán Anita", helyes: true },
       { szoveg: "Forman Norbert", helyes: false },
@@ -676,7 +910,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Pénzügyi Tanszék vezetőnket?",
+    kerdes: "Hogy hívják a PSZK Pénzügyi Tanszék vezetőt?",
     valaszok: [
       { szoveg: "Dr. Fellegi Miklós", helyes: true },
       { szoveg: "Forman Norbert", helyes: false },
@@ -685,7 +919,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Hogy hívják a Számviteli Tanszék vezetőnket?",
+    kerdes: "Hogy hívják a PSZK Számviteli Tanszék vezetőt?",
     valaszok: [
       { szoveg: "Dr. Frányó Zsófia Zsuzsanna", helyes: true },
       { szoveg: "Forman Norbert", helyes: false },
@@ -847,9 +1081,9 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mi NEM a beirtakozás aktiválási feltétele?",
+    kerdes: "Mi NEM az aktív félévre beirtakozás feltétele?",
     valaszok: [
-      { szoveg: "", helyes: true },
+      { szoveg: "Budapesti Lakcím", helyes: true },
       { szoveg: "Ne legyen pénzügyi tartozás", helyes: false },
       { szoveg: "Önköltségi díj első részlet befizetése", helyes: false },
       { szoveg: "Legalább 1 tárgy felvétele", helyes: false }
