@@ -226,7 +226,7 @@ const kerdesek = [
       { szoveg: "HTJB", helyes: true },
       { szoveg: "DJB", helyes: false },
       { szoveg: "HÖK", helyes: false },
-      { szoveg: "Senátus", helyes: false }
+      { szoveg: "Szenátus", helyes: false }
     ]
   },
   {
@@ -289,7 +289,7 @@ const kerdesek = [
       { szoveg: "Kiemelkedő tanulmánnyal eredménnyel és szociálisan rászoruló ÖNKÖLTSÉGES hallgatók támogatása.", helyes: true },
       { szoveg: "Állami támogatott, kiemelkedő tanulmányi eredménnyel rendelkező hallgatók további ösztönzése.", helyes: false },
       { szoveg: "Önköltséges, gyenge tanulmányi eredménnyel rendelkező hallgatók ösztönzése.", helyes: false },
-      { szoveg: "Külföldi tanulmányiutak teljes körű finanszírozása kiemelkedő tanulmányi eredménnyel rendelkezp hallgatók számára.", helyes: false }
+      { szoveg: "Külföldi tanulmányiutak finanszírozása kiemelkedő tanulmányi eredménnyel rendelkezŐ hallgatóknak.", helyes: false }
     ]
   },
   {
@@ -447,7 +447,7 @@ const kerdesek = [
     valaszok: [
       { szoveg: "Csak a Zuglói Kampuszon van (PSZK,MK)", helyes: true },
       { szoveg: "Karonként akár 20 fő is részesülhet benne", helyes: false },
-      { szoveg: "Minden hallgató automatikusan megkapja az első félév után, akinek elért minimum 4,4KKI-et.", helyes: false },
+      { szoveg: "Minden hallgató automatikusan megkapja az első félév után, aki elért minimum 4,4KKI-et.", helyes: false },
       { szoveg: "Csak mesterképzésen részt vevő hallgatók pályázhatnak rá.", helyes: false }
     ]
   }
