@@ -59,6 +59,33 @@ const kerdesek = [
     ]
   },
   {
+    kerdes: "Mit rövidít a 'DJB' ?",
+    valaszok: [
+      { szoveg: "Diákjóléti Bizottság", helyes: true },
+      { szoveg: "Diákigazolvány Jegyzési Bizottság", helyes: false },
+      { szoveg: "Diákszövetségi Juttatási Bizottság", helyes: false },
+      { szoveg: "Diákjogvédelmi Bizottság", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Az alábbiak közül melyik NEM egy elérhetőségi email cím a DJBhez?",
+    valaszok: [
+      { szoveg: "djb.ngm@unibge.hu", helyes: true },
+      { szoveg: "djb.pszk@unibge.hu", helyes: false },
+      { szoveg: "djb.mukk@unibge.hu", helyes: false },
+      { szoveg: "djb.mk@unibge.hu", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Miért felel a DJB?",
+    valaszok: [
+      { szoveg: "Ösztöndíjak bírálatáért, valamint előterjesztéséért felel (előkészíti a pályázatokat a HTJB döntéséhez)", helyes: true },
+      { szoveg: "A hallgatói rendezvények szervezéséért és lebonyolításáért", helyes: false },
+      { szoveg: "A vizsgaidőszakok beosztásáért és az oktatók értékeléséért", helyes: false },
+      { szoveg: "Az egyetemi sportprogramok és versenyek koordinálásáért", helyes: false }
+    ]
+  },
+  {
     kerdes: "Mi a feladata a Tanulmányi Bizottságnak?",
     valaszok: [
       { szoveg: "Kérvények bírálása", helyes: true },
@@ -236,6 +263,34 @@ const kerdesek = [
       { szoveg: "FaceBook", helyes: false },
       { szoveg: "Felelős Bizottság", helyes: false },
       { szoveg: "Forgalmi Bizottság", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hány hónapra lehet pályázni évente a 'Bursa Hungarica' nevű ösztöndíjra?",
+    valaszok: [
+      { szoveg: "10 hónapra", helyes: true },
+      { szoveg: "12 hónapra / 1 évre", helyes: false },
+      { szoveg: "8 hónapra", helyes: false },
+      { szoveg: "6 hónapra / 1 félévre", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen formában kell jelentkezni kollégiumi helyért?",
+    valaszok: [
+      { szoveg: "Modulo felületen", helyes: true },
+      { szoveg: "Emailen keresztül", helyes: false },
+      { szoveg: "Neptun felületen", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatán", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Hogy szól, a pályázi követelménye a 'Bursa Hungarica'-ra?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
+      { szoveg: "Alap- és mesterképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "FOSZK, nappali, állami", helyes: false }
     ]
   },
   {
@@ -717,6 +772,24 @@ const kerdesek = [
       { szoveg: "Dr. Szászvári Karina Ágnes", helyes: false },
       { szoveg: "Dr. habil. Kása Richárd", helyes: false },
       { szoveg: "Prof. Dr. Csillag Sára", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Mit rövidít a 'HSZB'?",
+    valaszok: [
+      { szoveg: "Hallgatói Szociális Bizottság", helyes: true },
+      { szoveg: "Hallgatói Szervezési Bizottság", helyes: false },
+      { szoveg: "Hallgatói Szabályzat Bizottság", helyes: false },
+      { szoveg: "Hallgatói Sport Bizottság", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hogy hívják a HSZB elnökét?",
+    valaszok: [
+      { szoveg: "Varga Anna", helyes: true },
+      { szoveg: "Dr. Andor György", helyes: false },
+      { szoveg: "Dr. Urbán Liliána", helyes: false },
+      { szoveg: "Dr. Dén-Nagy Ildikó", helyes: false }
     ]
   },
   {
