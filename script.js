@@ -152,7 +152,7 @@ const kerdesek = [
     kerdes: "Melyik dokumentumban szerepelnek a hallgatói kötelezettségek?",
     valaszok: [
       { szoveg: "Tanulmányi és Vizsgaszabályzatban (TVSZ)", helyes: true },
-      { szoveg: "HKR-ben", helyes: false },
+      { szoveg: "Hallgatói Térítési és Juttatási Szabályzatban (HTJSZ)", helyes: false },
       { szoveg: "DJB szabályzatban", helyes: false },
       { szoveg: "Kari rendtartásban", helyes: false }
     ]
@@ -647,15 +647,6 @@ const kerdesek = [
       { szoveg: "Neptunban", helyes: false },
       { szoveg: "Emailben", helyes: false },
       { szoveg: "Modulo", helyes: false }
-    ]
-  },
-  {
-    kerdes: "Mi történik, ha a hallgató háromszor megbukik egy tárgyból?",
-    valaszok: [
-      { szoveg: "A tárgyból eltilthatják", helyes: true },
-      { szoveg: "Újra felveheti korlátlanul", helyes: false },
-      { szoveg: "Átírják más tárgyra", helyes: false },
-      { szoveg: "Fizetési kedvezményt kap", helyes: false }
     ]
   },
   {
