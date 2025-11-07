@@ -284,6 +284,15 @@ const kerdesek = [
     ]
   },
   {
+    kerdes: "Milyen lehet a pályázók köre, a Rendszeres szociális támogatásnak?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés, nappalis, államilag támogatott (vagy átsorolták és van még állami féléve)", helyes: true },
+      { szoveg: "Alap- és mesterképzés, nappalis, államilag támogatott (vagy átsorolták és van még állami féléve)", helyes: false },
+      { szoveg: "Mesterképzés, nappalis, államilag támogatott (vagy átsorolták és van még állami féléve)", helyes: false },
+      { szoveg: "Mesterképzés, levelezői, állami támogatott forma", helyes: false }
+    ]
+  },
+  {
     kerdes: "Mi a célja, a BGE ösztöndíjnak?",
     valaszok: [
       { szoveg: "Kiemelkedő tanulmánnyal eredménnyel és szociálisan rászoruló ÖNKÖLTSÉGES hallgatók támogatása.", helyes: true },
@@ -313,6 +322,15 @@ const kerdesek = [
   ,
   {
     kerdes: "Melyik felületen kell pályázni a BGE ösztöndíjra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunnon keresztül", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatánál", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Melyik felületen kell pályázni a Rendszeres Szociális támogatásra?",
     valaszok: [
       { szoveg: "Modulo", helyes: true },
       { szoveg: "Emailben", helyes: false },
@@ -535,6 +553,101 @@ const kerdesek = [
       { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
       { szoveg: "FOSZK, nappali, állami", helyes: false }
     ]
+  }
+  ,
+  {
+    kerdes: "Milyen lehet a pályázók köre, az Alaptámogatásra?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés nappali, első államilag támogatott félév", helyes: true },
+      { szoveg: "FOSZK, alap- és mesterképzés nappali, állami", helyes: false },
+      { szoveg: "FOSZK, alap- és mesterképzés levelező, első államilag támogatott félév", helyes: false },
+      { szoveg: "Alap- és mesterképzés levelező, első államilag támogatott félév", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Milyen lehet a pályázók köre, a Rendkívüli Szociális támogatásra?",
+    valaszok: [
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, államilag támogatott (vagy átsorolták és van még állami féléve)", helyes: true },
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, önköltséges", helyes: false },
+      { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: false },
+      { szoveg: "Alap- és mesterképzés, nappali, önköltséges", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hol kell leadni a pályázatot az Alaptámogatásra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunban", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatán", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hol kell leadni a pályázatot a Rendkívüli Szociális támogatásra?",
+    valaszok: [
+      { szoveg: "Modulo", helyes: true },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Neptunban", helyes: false },
+      { szoveg: "Az adott egyetem ügyfélszolgálatán", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Milyen élethelyzetre alkalmazzák a Rendkívüli Szociális támogatást?",
+    valaszok: [
+      { szoveg: "A hallgató szociális helyzetének váratlan romlásának enyhítésére van", helyes: true },
+      { szoveg: "A hallgató ZH eredményeinek váratlan romlásának enyhítésére van", helyes: false },
+      { szoveg: "A rendszeres havi megélhetési költségek hosszú távú fedezésére.", helyes: false },
+      { szoveg: "A hallgató nyári szünet alatti kiemelkedő közösségi munka további bíztatására.", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Fellebbezés esetén hány alkalommal van lehetőség a hiánypótlásra?",
+    valaszok: [
+      { szoveg: "Nincs lehetőség hiánypótlásra!", helyes: true },
+      { szoveg: "3 alkalom", helyes: false },
+      { szoveg: "Csak 1 alkalom", helyes: false },
+      { szoveg: "2 alkalom", helyes: false }
+    ]
+  },
+  {
+    kerdes: "A fellebbezési határozat kézhezvételétől számítva hány munkanapon belül kell beadni a Neptun -> Kérvények felületre?",
+    valaszok: [
+      { szoveg: "15 munkanap", helyes: true },
+      { szoveg: "10 munkanap", helyes: false },
+      { szoveg: "15 nap", helyes: false },
+      { szoveg: "10 nap", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Mekkora juttatásra tehet szert az a hallgató aki megkapta Alaptámogatást ALAPKÉPZÉSEN?",
+    valaszok: [
+      { szoveg: "50% a féléves tandíjának", helyes: true },
+      { szoveg: "75% a féléves tandíjának", helyes: false },
+      { szoveg: "100% a féléves tandíjának", helyes: false },
+      { szoveg: "25% a féléves tandíjának", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Az alábbiak közül melyik NEM feltétele az Alaptámogatás megszerezésére?",
+    valaszok: [
+      { szoveg: "A hallgatónak nincsen Budapesti lakcímkártyája", helyes: true },
+      { szoveg: "Családfenntartó, nagycsaládos", helyes: false },
+      { szoveg: "árva vagy félárva", helyes: false },
+      { szoveg: "Fogyatékossággal élő vagy egészségügyi állapota miatt rászorult hallgató", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Hol kell leadni a pályázatot a 'Bursa Hungarica'-ra?",
+    valaszok: [
+      { szoveg: "Helyi önkormányzat, amennyiben csatlakozott a programhoz", helyes: true },
+      { szoveg: "Neptunban", helyes: false },
+      { szoveg: "Emailben", helyes: false },
+      { szoveg: "Modulo", helyes: false }
+    ]
   },
   {
     kerdes: "Mi történik, ha a hallgató háromszor megbukik egy tárgyból?",
@@ -712,12 +825,12 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mely tagokból áll össze, a HTJB?",
+    kerdes: "Hogy hívják a HTJB elnökét?",
     valaszok: [
-      { szoveg: "A bizottság elnöke és az általános rektorhelyettes", helyes: true },
-      { szoveg: "Elnök, DJB elnökök, karonként 1-1 oktató", helyes: false },
-      { szoveg: "Az elnök, továbbá karonként egy-egy oktató", helyes: false },
-      { szoveg: "EHÖK elnök + kari elnökök", helyes: false }
+      { szoveg: "Dr. Jancsik András", helyes: true },
+      { szoveg: "Varga Anna", helyes: false },
+      { szoveg: "Dr. Andor György", helyes: false },
+      { szoveg: "Szőke Annamária", helyes: false }
     ]
   },
   {
@@ -1024,6 +1137,25 @@ const kerdesek = [
       { szoveg: "Dr. Andor György", helyes: false },
       { szoveg: "Dr. Urbán Liliána", helyes: false },
       { szoveg: "Dr. Dén-Nagy Ildikó", helyes: false }
+    ]
+  },
+  {
+    kerdes: "Hány tagja van a HSZB-nek?",
+    valaszok: [
+      { szoveg: "21", helyes: true },
+      { szoveg: "20", helyes: false },
+      { szoveg: "15", helyes: false },
+      { szoveg: "17", helyes: false }
+    ]
+  }
+  ,
+  {
+    kerdes: "Mi a feladata a HSZB-nek?",
+    valaszok: [
+      { szoveg: "A szociális helyzettel összefüggésbe hozható ösztöndíjak, támogatások bírálatát végzi", helyes: true },
+      { szoveg: "A hallgatók tanulmányi értékelése.", helyes: false },
+      { szoveg: "Egyetemi rendezvények és gólyatáborok megszervezése.", helyes: false },
+      { szoveg: "Az ösztöndíjak automatikus kiosztása a tanulmányi rendszerben.", helyes: false }
     ]
   },
   {
