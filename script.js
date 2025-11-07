@@ -230,7 +230,7 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mi a minimum KKI a tanulmányi ösztöndíjhoz?",
+    kerdes: "Mi a minimum KKI a Kiemelt Tanulmányi ösztöndíjhoz?",
     valaszok: [
       { szoveg: "4,4", helyes: true },
       { szoveg: "3,9", helyes: false },
@@ -344,7 +344,7 @@ const kerdesek = [
       { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: true },
       { szoveg: "Alapképzés, nappali, önköltséges", helyes: false },
       { szoveg: "Alapképzés, nappali, állami", helyes: false },
-      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+      { szoveg: "Mesterképzés, nappali, önköltséges", helyes: false }
     ]
   },
   {
@@ -353,7 +353,7 @@ const kerdesek = [
       { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
       { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
       { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
-      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+      { szoveg: "Mesterképzés, nappali, önköltséges", helyes: false }
     ]
   },
   {
@@ -362,7 +362,7 @@ const kerdesek = [
       { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
       { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
       { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
-      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+      { szoveg: "Mesterképzés, nappali, önköltséges", helyes: false }
     ]
   },
   {
@@ -371,7 +371,7 @@ const kerdesek = [
       { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: true },
       { szoveg: "FOSZK, alap- és mesterképzés, nappali, finanszírozási formától független", helyes: false },
       { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
-      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+      { szoveg: "Mesterképzés, nappali, önköltséges", helyes: false }
     ]
   },
   {
@@ -380,7 +380,7 @@ const kerdesek = [
       { szoveg: "Alap- és mesterképzés, nappali, finanszírozási formától független", helyes: true },
       { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
       { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
-      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+      { szoveg: "Mesterképzés, nappali, önköltséges", helyes: false }
     ]
   }
   ,
@@ -390,7 +390,7 @@ const kerdesek = [
       { szoveg: "FOSZK, alap- és mesterképzés, nappali, államis", helyes: true },
       { szoveg: "Alapképzés, nappali, finanszírozási formától független", helyes: false },
       { szoveg: "FOSZK, nappali, finanszírozási formától független", helyes: false },
-      { szoveg: "Mesterképzps, nappali, önköltséges", helyes: false }
+      { szoveg: "Mesterképzés, nappali, önköltséges", helyes: false }
     ]
   },
   {
