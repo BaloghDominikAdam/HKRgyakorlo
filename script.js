@@ -1303,10 +1303,10 @@ const kerdesek = [
     ]
   },
   {
-    kerdes: "Mit NEM SZABAD vinned egy Vizsgaközpontban megírt ZH-ra",
+    kerdes: "Mit KELL vinned egy Vizsgaközpontban megírt ZH-ra",
     valaszok: [
-      { szoveg: "Nem zárható italt", helyes: true },
-      { szoveg: "Fényképes igazolványt", helyes: false },
+      { szoveg: "Fényképes igazolványt", helyes: true },
+      { szoveg: "A4-es papír", helyes: false },
       { szoveg: "Számológépet", helyes: false },
       { szoveg: "Tollat", helyes: false }
     ]
